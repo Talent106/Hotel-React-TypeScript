@@ -6,4 +6,9 @@ $theme-colors: (
   'warning': rgb(221, 255, 0)
 );
 
+//width
+.w-20rem {
+    max-width: 20rem;
+}
+
 @import 'bootstrap/scss/bootstrap';

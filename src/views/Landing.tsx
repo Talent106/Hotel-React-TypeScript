@@ -1,6 +1,8 @@
 import React from 'react';
 import Banner from '@/components/Landing/Banner';
 import BannerItems from '@/contents/BannerItems';
+import Products from '@/components/Landing/Products';
+import ProductsItems from '@/contents/ProductsItems';
 import '@/assets/scss/views/Landing.scss';
 
 const Landing: React.FC = () => {
@@ -22,6 +24,7 @@ const Landing: React.FC = () => {
             </div>
 
             <Banner BannerItems={BannerItems} />
+            <Products ProductsItems={ProductsItems} />
         </div>
     )
 }
