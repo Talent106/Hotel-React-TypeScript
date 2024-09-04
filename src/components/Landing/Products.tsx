@@ -24,9 +24,11 @@ const Products: React.FC<ProductsProps> = ({ ProductsItems }) => {
                     <div className="card w-20rem m-3" key={index}>
                         <img src={item.img} className="card-img-top" alt="Image" />
                         <div className="card-body">
-                            {item.brand &&
-                                <p className="brand-name">{ item.brand }</p>
-                            }
+                            <p className="brand-name h-2rem">
+                                {item.brand &&
+                                    <>{ item.brand }</>
+                                }
+                            </p>
                             <h5 className="card-title bold">{ item.title }</h5>
                             <div className="d-flex">
                                 <div className="star text-danger">
