@@ -1,0 +1,46 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #333;
+    height: max-content;
+    padding: 30px;
+
+    .info {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        border-bottom: 1px solid #7e7777;
+        padding: 20px;
+
+        .logo {
+            height: 140px;
+        }
+
+        .footer-info {
+            display: flex;
+            flex-direction: column;
+            width: 200px;
+        }
+
+        .information {
+            display: flex;
+            flex-direction: column;
+
+            a {
+                color: rgb(173, 173, 173);
+                font-size: 13px;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .payment {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        .payment-icons {
+            display: flex;
+        }
+    }
+}

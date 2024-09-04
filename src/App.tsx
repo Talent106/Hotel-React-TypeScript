@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import Landing from './views/Landing';
 
 const App: React.FC = () => {
@@ -10,6 +11,7 @@ const App: React.FC = () => {
 		<Routes>
 			<Route path="/" element={<Landing />} />
 		</Routes>
+        <Footer />
 	</BrowserRouter>
   );
 }
