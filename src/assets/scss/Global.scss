@@ -6,6 +6,12 @@ $theme-colors: (
   'warning': rgb(221, 255, 0)
 );
 
+//flex
+.content-center {
+    display: flex;
+    justify-content: center;
+}
+
 //width. height
 .w-30 {
     width: 30%;
@@ -81,6 +87,11 @@ $theme-colors: (
 
 .light-black-4 {
     color: #969696;
+}
+
+
+input {
+    border: 1px solid #c0c0c0 !important;
 }
 
 @import 'bootstrap/scss/bootstrap';

@@ -1,10 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import NewsLetter from '@/components/Landing/NewsLetter';
 import '@/assets/scss/views/Auth/Login.scss';
 
 const Login: React.FC = () => {
+    const navigate = useNavigate();
+
     return (
         <div className='login'>
             <div className="content my-3">
@@ -36,7 +39,11 @@ const Login: React.FC = () => {
                         <li>Track new orders</li>
                         <li>Save items to your Wish List</li>
                     </div>
-                    <Button variant="primary mt-3 capslock bold" type="submit">
+                    <Button
+                        variant="primary mt-3 capslock bold"
+                        type="submit"
+                        onClick={() => navigate("/register")}
+                    >
                         Create account
                     </Button>
                 </div>
