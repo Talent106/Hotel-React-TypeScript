@@ -1,23 +1,29 @@
 import React from 'react';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import InputGroup from 'react-bootstrap/InputGroup';
+import Logo from '@/assets/img/lp_logo_1_1706041538__38057.webp';
 import '@/assets/scss/components/Header.scss';
 
 const Header: React.FC = () => {
     return (
         <div className="header">
             <a href="/">
-                <img className="logo" src="../assets/img/lp_logo_1_1706041538__38057.webp" />
+                <img className="logo" src={Logo} />
             </a>
 
             <div className="menu">
                 <div className="top-bar">
-                    <div className="input-group">
-                        <input type="text" className="form-control" placeholder="What are you looking for?" />
-                        <div className="input-group-append">
-                            <button className="btn btn-outline-success" type="button">
-                                <i className="bi bi-search"></i>
-                            </button>
-                        </div>
-                    </div>
+                    <InputGroup className="mb-3">
+                        <Form.Control
+                            placeholder="Recipient's username"
+                            aria-label="Recipient's username"
+                            aria-describedby="basic-addon2"
+                        />
+                        <Button variant="outline-secondary" id="button-addon2">
+                            <i className="bi bi-search"></i>
+                        </Button>
+                    </InputGroup>
                     <div className="d-flex ms-4">
                         <i className="bi bi-geo-alt-fill me-2"></i>
                         <a>Store Locator</a>
