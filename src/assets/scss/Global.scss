@@ -1,5 +1,5 @@
 $theme-colors: (
-  'primary': rgb(255, 255, 255),
+  'primary': rgb(109, 109, 109),
   'success': green,
   'danger': #e80303,
   'info': rgb(0, 251, 255),
@@ -7,12 +7,80 @@ $theme-colors: (
 );
 
 //width. height
+.w-30 {
+    width: 30%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-70 {
+    width: 70%;
+}
+
+.w-90 {
+    width: 90%;
+}
+
 .w-20rem {
     max-width: 20rem;
 }
 
+.w-40rem {
+    max-width: 40rem;
+}
+
+.w-60rem {
+    max-width: 60rem;
+}
+
+.w-80rem {
+    max-width: 80rem;
+}
+
 .h-2rem {
     height: 2rem;
+}
+
+
+//font
+.bold {
+    font-weight: bold !important;
+}
+
+.capslock {
+    text-transform: uppercase !important;
+}
+
+.f-12 {
+    font-size: 12px;
+}
+
+.f-13 {
+    font-size: 13px;
+}
+
+.f-25 {
+    font-size: 25px;
+}
+
+
+//color
+.light-black-1 {
+    color: #2e2e2e;
+}
+
+.light-black-2 {
+    color: #504f4f;
+}
+
+.light-black-3 {
+    color: #747474;
+}
+
+.light-black-4 {
+    color: #969696;
 }
 
 @import 'bootstrap/scss/bootstrap';
