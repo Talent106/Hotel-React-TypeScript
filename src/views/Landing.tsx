@@ -3,6 +3,7 @@ import Banner from '@/components/Landing/Banner';
 import BannerItems from '@/contents/BannerItems';
 import Products from '@/components/Landing/Products';
 import ProductsItems from '@/contents/ProductsItems';
+import NewsLetter from '@/components/Landing/NewsLetter';
 import '@/assets/scss/views/Landing.scss';
 
 const Landing: React.FC = () => {
@@ -25,6 +26,7 @@ const Landing: React.FC = () => {
 
             <Banner BannerItems={BannerItems} />
             <Products ProductsItems={ProductsItems} />
+            <NewsLetter />
         </div>
     )
 }
