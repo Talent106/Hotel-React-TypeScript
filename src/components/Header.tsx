@@ -20,8 +20,8 @@ const Header: React.FC = () => {
                             aria-label="Recipient's username"
                             aria-describedby="basic-addon2"
                         />
-                        <Button variant="outline-secondary" id="button-addon2">
-                            <i className="bi bi-search"></i>
+                        <Button variant="outline-info" id="button-addon2">
+                            <i className="bi bi-search-heart-fill"></i>
                         </Button>
                     </InputGroup>
                     <div className="d-flex ms-4">
@@ -46,9 +46,9 @@ const Header: React.FC = () => {
                         <a>Blog</a>
                         <a href="/contact">Contact Us</a>
                     </div>
-                    <button className="btn btn-outline-danger rounded-pill">
+                    <Button variant="outline-danger rounded-pill" id="button-addon2">
                         <i className="bi bi-cart3 me-2"></i>CART
-                    </button>
+                    </Button>
                 </div>
             </div>
         </div>
