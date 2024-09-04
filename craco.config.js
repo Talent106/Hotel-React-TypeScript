@@ -6,9 +6,14 @@ module.exports = {
       '@': path.resolve(__dirname, 'src'),
     },
     configure: (webpackConfig) => {
-      // Adding necessary rules for SCSS handling
-      const rules = webpackConfig.module.rules.find(rule => Array.isArray(rule.oneOf)).oneOf;
-      rules.unshift({
+      // Find the existing rule that handles SCSS files and remove it
+      const oneOfRule = webpackConfig.module.rules.find(rule => Array.isArray(rule.oneOf));
+      if (oneOfRule) {
+        oneOfRule.oneOf = oneOfRule.oneOf.filter(rule => !(rule.test && rule.test.toString().includes('scss')));
+      }
+
+      // Add custom SCSS loader configuration
+      oneOfRule.oneOf.unshift({
         test: /\.scss$/,
         use: [
           'style-loader',
@@ -22,11 +27,14 @@ module.exports = {
           {
             loader: 'sass-loader',
             options: {
+              implementation: require('sass'), // Use Dart Sass
               sourceMap: true,
             },
           },
         ],
+        include: path.resolve(__dirname, 'src'), // Include your source directory
       });
+
       return webpackConfig;
     },
   },
