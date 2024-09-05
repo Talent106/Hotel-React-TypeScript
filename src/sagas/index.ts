@@ -1,10 +1,16 @@
-import { all } from 'redux-saga/effects';
-// Import your individual sagas here
-// import someSaga from './someSaga';
+// import { all, takeLatest } from 'redux-saga/effects';
+// import {
+//   REGISTER_REQUEST
+// } from '@/actions';
 
-export default function* rootSaga() {
-  yield all([
-    // Add your sagas here
-    // someSaga(),
-  ]);
-}
+// import {
+//   registerRequest
+// } from './App';
+
+// import api from '@/api/api';
+
+// export default function* rootSaga() {
+//   yield all([
+//     takeLatest(REGISTER_REQUEST, registerRequest, api),
+//   ]);
+// }

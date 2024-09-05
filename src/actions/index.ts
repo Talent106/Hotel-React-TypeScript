@@ -35,7 +35,7 @@ export interface LoginSuccessAction {
 }
 
 export type ActionTypes =
-RegisterRequestAction
+| RegisterRequestAction
 | RegisterSuccessAction
 | LoginRequestAction
 | LoginSuccessAction;
