@@ -1,15 +1,11 @@
-import { createStore, applyMiddleware } from 'redux';
-import createSagaMiddleware from 'redux-saga';
-import rootReducer from '@/reducer';  // Make sure the path is correct and matches your structure
-import rootSaga from '@/sagas';
+import { configureStore } from '@reduxjs/toolkit';
+import rootReducer from './reducers';
 
-const sagaMiddleware = createSagaMiddleware();
+const store = configureStore({
+  reducer: rootReducer,
+});
 
-const store = createStore(
-  rootReducer,
-  applyMiddleware(sagaMiddleware)
-);
-
-sagaMiddleware.run(rootSaga);
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;
 
 export default store;

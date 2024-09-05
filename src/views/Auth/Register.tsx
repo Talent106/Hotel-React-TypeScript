@@ -1,23 +1,27 @@
 import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import { ToastContainer, toast } from 'react-toastify';
+import { useAppDispatch } from '@/hooks';
 import NewsLetter from '@/components/Landing/NewsLetter';
+import { registerRequest } from '@/actions/App';
 import '@/assets/scss/views/Auth/Register.scss';
 
 const Register: React.FC = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [conform, setConform] = useState('');
+    const dispatch = useAppDispatch();
 
     const handleRegister = () => {
         if (email && password && conform) {
             if (password == conform) {
-
+                dispatch(registerRequest({ email, password }));
             } else {
-                
+                toast.error("Please check your password...");
             }
         } else {
-
+            toast.error("Please enter your value...");
         }
     }
 
@@ -30,8 +34,9 @@ const Register: React.FC = () => {
                     <Form.Control
                         type="email"
                         placeholder="Enter email"
+                        id="email"
                         defaultValue={email}
-                        onChange={(e) => setPassword(e.target.value)}
+                        onChange={(e) => setEmail(e.target.value)}
                     />
                 </Form.Group>
 
@@ -40,6 +45,7 @@ const Register: React.FC = () => {
                     <Form.Control
                         type="password"
                         placeholder="Enter password"
+                        id="password"
                         defaultValue={password}
                         onChange={e => setPassword(e.target.value)}
                     />
@@ -50,6 +56,7 @@ const Register: React.FC = () => {
                     <Form.Control
                         type="password"
                         placeholder="Enter conform"
+                        id="conform"
                         defaultValue={conform}
                         onChange={e => setConform(e.target.value)}
                     />
@@ -67,6 +74,7 @@ const Register: React.FC = () => {
             </div>
 
             <NewsLetter />
+            <ToastContainer />
         </div>
     )
 }
