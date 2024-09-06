@@ -11,7 +11,10 @@ export interface Credential {
 }
 
 export interface Response {
-    data: any[]
+    type: any;
+    success: boolean;
+    message: string;
+    data: any[];
 }
 
 export interface RegisterRequestAction {
@@ -34,8 +37,14 @@ export interface LoginSuccessAction {
     payload: Response;
 }
 
+export interface ErrorFoundAction {
+    type: typeof ERROR_FOUND,
+    payload: Response
+}
+
 export type ActionTypes =
 | RegisterRequestAction
 | RegisterSuccessAction
 | LoginRequestAction
-| LoginSuccessAction;
+| LoginSuccessAction
+| ErrorFoundAction;

@@ -6,6 +6,7 @@ import {
     Response,
     ActionTypes,
     Credential,
+    ERROR_FOUND,
 } from './index';
 
 export const registerRequest = (credential: Credential): ActionTypes => ({
@@ -25,5 +26,10 @@ export const loginRequest = (credential: Credential): ActionTypes => ({
 
 export const loginSuccess = (response: Response): ActionTypes => ({
     type: LOGIN_SUCCESS,
+    payload: response
+});
+
+export const errorFound = (response: Response): ActionTypes => ({
+    type: ERROR_FOUND,
     payload: response
 });

@@ -3,15 +3,10 @@ import { ToastContainer, toast } from 'react-toastify';
 import {
     RegisterRequestAction,
     REGISTER_SUCCESS,
-    ERROR_FOUND
+    ERROR_FOUND,
+    Response
 } from '@/actions'; 
 import API from '@/api/api';
-
-interface Response {
-    success: boolean;
-    message: string;
-    data: any[];
-}
 
 export function* registerRequest(actions: RegisterRequestAction) {
     try {
