@@ -4,7 +4,9 @@ import {
     RegisterRequestAction,
     REGISTER_SUCCESS,
     ERROR_FOUND,
-    Response
+    Response,
+    LoginRequestAction,
+    LOGIN_SUCCESS
 } from '@/actions'; 
 import API from '@/api/api';
 
@@ -16,6 +18,19 @@ export function* registerRequest(actions: RegisterRequestAction) {
         } else {
             yield put({ type: ERROR_FOUND });
             yield toast.error(response.message);
+        }
+    } catch {
+        yield put({ type: ERROR_FOUND });
+    }
+}
+
+export function* loginRequest(actions: LoginRequestAction) {
+    try {
+        const response: Response = yield call(API.login, actions.payload);
+        if (response.success) {
+            yield put({ type: LOGIN_SUCCESS, payload: response.data });
+        } else {
+            yield put({ type: ERROR_FOUND });
         }
     } catch {
         yield put({ type: ERROR_FOUND });
