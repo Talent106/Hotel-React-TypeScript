@@ -1,14 +1,10 @@
-// import axios from 'axios';
-// import { Credential } from '@/actions';
+import axios from 'axios';
+import { Credential } from '@/actions';
 
-// interface API {
-//     api: string;
-// }
+const URL = 'http://127.0.0.1:9000/v1/';
 
-// const URL = 'http://127.0.0.1:9000/v1/';
+const register = (e: Credential) => axios.post(`${URL}auth/register`, e);
 
-// const register: API = (e: Credential) => axios.post(`${URL}auth/register`, e);
-
-// export default {
-//     register
-// }
+export default {
+    register
+};
