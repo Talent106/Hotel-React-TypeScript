@@ -1,6 +1,9 @@
 import {
     REGISTER_REQUEST,
-    ActionTypes
+    REGISTER_SUCCESS,
+    LOGIN_REQUEST,
+    LOGIN_SUCCESS,
+    ActionTypes,
 } from "../actions";
 
 interface UserState {
@@ -18,11 +21,27 @@ const initialState: UserState = {
 export default function users(state = initialState, action: ActionTypes): UserState {
     switch (action.type) {
         case REGISTER_REQUEST:
-          return {
-            ...state,
-            loading: true,
-          }
+            return {
+                ...state,
+                loading: true,
+            }
+        case REGISTER_SUCCESS:
+            return {
+                ...state,
+                loading: false,
+            }
+        case LOGIN_REQUEST:
+            return {
+                ...state,
+                loading: true
+            }
+        case LOGIN_SUCCESS:
+            return {
+                ...state,
+                loading: false
+            }
+
         default:
-          return state
+            return state
     }
 }
