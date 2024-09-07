@@ -1,0 +1,14 @@
+.about_us {
+    display: flex;
+    flex-direction: column;
+    padding-top: 250px;
+
+    .our_story {
+        display: flex;
+        
+        .context {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

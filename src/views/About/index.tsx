@@ -1,5 +1,6 @@
 import React from "react";
 import Story from "./Story";
+import '@/assets/scss/views/About/AboutUs.scss';
 
 const AboutUs: React.FC = () => {
     return (
