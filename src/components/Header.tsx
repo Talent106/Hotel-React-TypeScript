@@ -42,7 +42,7 @@ const Header: React.FC = () => {
                         <a>NEWS!</a>
                         <a>Dog</a>
                         <a>Cat</a>
-                        <a>About</a>
+                        <a href='/about-us'>About</a>
                         <a>Blog</a>
                         <a href="/contact">Contact Us</a>
                     </div>

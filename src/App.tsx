@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Landing from './views/Landing';
 import Login from './views/Auth/Login';
 import Register from './views/Auth/Register';
+import AboutUs from './views/About';
 
 const App: React.FC = () => {
   return (
@@ -14,6 +15,7 @@ const App: React.FC = () => {
 			<Route path="/" element={<Landing />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/about-us" element={<AboutUs />} />
 		</Routes>
         <Footer />
 	</BrowserRouter>
