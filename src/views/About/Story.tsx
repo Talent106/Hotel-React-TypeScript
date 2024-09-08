@@ -12,6 +12,7 @@ const Story: React.FC = () => {
 
                     Nestled in the heart of Cranbury, NJ, our headquarters serves as the bustling hub of creativity and innovation. Here, under one roof, we weave dreams into reality, with manufacturing, warehousing, and packaging working seamlessly together. And just like a pet with multiple toys, we believe in redundancy – our additional production facilities nearby ensure uninterrupted supply, because every pet deserves a treat!
                 </p>
+                <a className="bold text-danger f-20" href="">Read More +</a>
             </div>
         </div>
     )
