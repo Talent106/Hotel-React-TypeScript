@@ -7,12 +7,37 @@ $theme-colors: (
 );
 
 //flex
+.flex-d {
+    display: flex;
+    flex-direction: column;
+}
+
 .content-center {
     display: flex;
     justify-content: center;
 }
 
+.sapce-around {
+    justify-content: space-around;
+}
+
+.flex-start {
+    justify-content: flex-start;
+}
+
 //width. height
+.w-15 {
+    width: 15%;
+}
+
+.w-20 {
+    width: 20%;
+}
+
+.w-25 {
+    width: 25%;
+}
+
 .w-30 {
     width: 30%;
 }
@@ -49,6 +74,9 @@ $theme-colors: (
     height: 2rem;
 }
 
+.w-fit-content {
+    width: fit-content;
+}
 
 //font
 .bold {

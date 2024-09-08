@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     padding-top: 250px;
+    position: relative;
 
     .our_story {
         display: flex;
@@ -14,5 +15,40 @@
                 text-decoration: none;
             }
         }
+    }
+
+    .quality {
+        display: flex;
+        flex-direction: column;
+        margin-top: 5rem;
+        position: relative;
+
+        .quality-control {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 5rem;
+            width: 70%;
+
+            .context {
+                display: flex;
+    
+                .certificate-img {
+                    .img-certificate {
+                        width: 400px;
+                    }
+                }
+            }
+        }        
+    }
+
+    .joyful-dog {
+        bottom: 0;
+        position: absolute;
+        right: 0;
+        max-width: 40%;
+        z-index: 1;
     }
 }
