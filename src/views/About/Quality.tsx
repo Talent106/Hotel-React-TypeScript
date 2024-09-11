@@ -13,7 +13,7 @@ const QualityControl: React.FC = () => {
                 <div className='context me-3'>
                     <div className='flex-d mb-4 me-4'>
                         <h1 className='bold mb-4'>Quality Control</h1>
-                        <p>
+                        <p className='f-20'>
                             Loving Pets is an SQF Level 2 Facility. We have been SQF certified since 2014.
 
                             During production we do inspections on the product every hour. The line production leader performs the inspections, and our QA Manager verifies that the inspections are being done properly. Our QA Manager gives the final release on the product by performing a QC Checklist and Batch Review Checklist.
@@ -23,7 +23,7 @@ const QualityControl: React.FC = () => {
                             It is important that you feel confident in the quality of your products. SQF procedures help limit exposure to potential food safety issues. Good manufacturing practices are a must and a requirement by SQF.
                         </p>
                         <Button
-                            variant="danger capslock bold w-fit-content"
+                            variant="danger f-20 capslock bold w-fit-content"
                             type="submit"
                         >
                             Download Certificate
