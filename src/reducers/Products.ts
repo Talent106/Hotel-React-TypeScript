@@ -1,5 +1,5 @@
 import { PRODUCTS_REQUEST, PRODUCTS_SUCCESS } from "@/actions";
-import { ProductType } from "@/actions/products";
+import { ProductsTypes } from "@/actions/products";
 
 interface ProductsState {
     loading: boolean;
@@ -13,7 +13,7 @@ const initialState: ProductsState = {
     error: null
 }
 
-export default function products(state = initialState, action: ProductType): ProductsState {
+export default function products(state = initialState, action: ProductsTypes): ProductsState {
     switch (action.type) {
         case PRODUCTS_REQUEST:
             return {
