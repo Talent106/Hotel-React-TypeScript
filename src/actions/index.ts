@@ -5,6 +5,9 @@ export const LOGIN_REQUEST = 'LOGIN_REQUEST';
 export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
 export const ERROR_FOUND = 'ERROR_FOUND';
 
+export const PRODUCTS_REQUEST = 'PRODUCTS_REQUEST';
+export const PRODUCTS_SUCCESS = 'PRODUCTS_SUCCESS';
+
 export interface Credential {
     email: string;
     password: string;
