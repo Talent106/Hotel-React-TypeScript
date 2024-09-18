@@ -31,3 +31,7 @@ export const productsSuccess = (response: Response): ProductsSuccessAction => ({
     type: PRODUCTS_SUCCESS,
     response
 });
+
+export type ProductType =
+| ProductsRequestAction
+| ProductsSuccessAction

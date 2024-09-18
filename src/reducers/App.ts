@@ -3,9 +3,10 @@ import {
     REGISTER_SUCCESS,
     LOGIN_REQUEST,
     LOGIN_SUCCESS,
-    ActionTypes,
     ERROR_FOUND,
 } from "../actions";
+
+import { ActionTypes } from "@/actions/App";
 
 interface UserState {
     users: any[];

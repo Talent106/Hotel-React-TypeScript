@@ -1,13 +1,15 @@
 import { put, call } from 'redux-saga/effects';
 import { ToastContainer, toast } from 'react-toastify';
 import {
-    RegisterRequestAction,
     REGISTER_SUCCESS,
     ERROR_FOUND,
     Response,
-    LoginRequestAction,
     LOGIN_SUCCESS
-} from '@/actions'; 
+} from '@/actions';
+import {
+    RegisterRequestAction,
+    LoginRequestAction
+} from '@/actions/App';
 import API from '@/api/api';
 
 export function* registerRequest(actions: RegisterRequestAction) {

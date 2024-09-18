@@ -61,3 +61,10 @@ export const errorFound = (response: Response): ErrorFoundAction => ({
     type: ERROR_FOUND,
     payload: response
 });
+
+export type ActionTypes =
+| RegisterRequestAction
+| RegisterSuccessAction
+| LoginRequestAction
+| LoginSuccessAction
+| ErrorFoundAction

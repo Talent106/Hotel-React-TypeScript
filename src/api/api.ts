@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { Credential } from '@/actions';
+import { Credential } from '@/actions/App';
 
 const URL = 'http://127.0.0.1:9000/v1/';
 
