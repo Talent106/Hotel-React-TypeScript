@@ -22,18 +22,18 @@ const Products: React.FC = () => {
 
         if (select == '') {
             toast.warning("Please select the menu");
-        }
-
-        if (title && !isNaN(numericPrice) && !isNaN(numericQuantity)) {
-            dispatch(productsRequest({
-                select,
-                title,
-                price: numericPrice,
-                cut: numericCut,
-                quantity: numericQuantity
-            }));
         } else {
-            toast.error("Please check your value...");
+            if (title && !isNaN(numericPrice) && !isNaN(numericQuantity)) {
+                dispatch(productsRequest({
+                    select,
+                    title,
+                    price: numericPrice,
+                    cut: numericCut,
+                    quantity: numericQuantity
+                }));
+            } else {
+                toast.error("Please check your value...");
+            }
         }
     }
 
