@@ -4,6 +4,7 @@ import {
     LOGIN_REQUEST,
     LOGIN_SUCCESS,
     ActionTypes,
+    ERROR_FOUND,
 } from "../actions";
 
 interface UserState {
@@ -36,6 +37,11 @@ export default function users(state = initialState, action: ActionTypes): UserSt
                 loading: true
             }
         case LOGIN_SUCCESS:
+            return {
+                ...state,
+                loading: false
+            }
+        case ERROR_FOUND:
             return {
                 ...state,
                 loading: false
