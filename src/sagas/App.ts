@@ -13,11 +13,11 @@ import API from '@/api/api';
 export function* registerRequest(actions: RegisterRequestAction) {
     try {
         const response: Response = yield call(API.register, actions.payload);
-        if (response.success) {
+        if (response.data.success) {
             yield put({ type: REGISTER_SUCCESS, payload: response.data });
         } else {
             yield put({ type: ERROR_FOUND });
-            yield toast.error(response.message);
+            yield toast.error(response.data.message);
         }
     } catch {
         yield put({ type: ERROR_FOUND });
@@ -27,7 +27,7 @@ export function* registerRequest(actions: RegisterRequestAction) {
 export function* loginRequest(actions: LoginRequestAction) {
     try {
         const response: Response = yield call(API.login, actions.payload);
-        if (response.success) {
+        if (response.data.success) {
             yield put({ type: LOGIN_SUCCESS, payload: response.data });
         } else {
             yield put({ type: ERROR_FOUND });

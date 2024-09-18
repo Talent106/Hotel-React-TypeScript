@@ -12,9 +12,11 @@ export interface Credential {
 
 export interface Response {
     type: any;
-    success: boolean;
-    message: string;
-    data: any[];
+    data: {
+        success: boolean,
+        message: string,
+        data: any[]
+    };
 }
 
 export interface RegisterRequestAction {
