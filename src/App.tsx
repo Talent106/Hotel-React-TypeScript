@@ -6,6 +6,7 @@ import Landing from './views/Landing';
 import Login from './views/Auth/Login';
 import Register from './views/Auth/Register';
 import AboutUs from './views/About';
+import Products from './views/Products';
 
 const App: React.FC = () => {
   return (
@@ -16,6 +17,7 @@ const App: React.FC = () => {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/products" element={<Products />} />
 		</Routes>
         <Footer />
 	</BrowserRouter>
