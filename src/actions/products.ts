@@ -4,7 +4,7 @@ import {
     Response
 } from ".";
 
-interface Products {
+export interface Products {
     select: string;
     title: string;
     price: number;
@@ -32,6 +32,6 @@ export const productsSuccess = (response: Response): ProductsSuccessAction => ({
     response
 });
 
-export type ProductType =
+export type ProductsTypes =
 | ProductsRequestAction
 | ProductsSuccessAction
