@@ -20,7 +20,11 @@ const Products: React.FC = () => {
         const numericCut = cut ? parseFloat(cut) : 0; // Optional field
         const numericQuantity = parseInt(quantity, 10);
 
-        if (select && title && !isNaN(numericPrice) && !isNaN(numericQuantity)) {
+        if (select == '') {
+            toast.warning("Please select the menu");
+        }
+
+        if (title && !isNaN(numericPrice) && !isNaN(numericQuantity)) {
             dispatch(productsRequest({
                 select,
                 title,
@@ -43,10 +47,10 @@ const Products: React.FC = () => {
                         defaultValue={select}
                         onChange={e => setSelect(e.target.value)}
                     >
-                        <option>Open this select menu</option>
-                        <option value="1">Corsa</option>
-                        <option value="2">Natures Choice</option>
-                        <option value="3">Bella Pet Mats</option>
+                        <option value=''>Open this select menu</option>
+                        <option value="Corsa">Corsa</option>
+                        <option value="Natures Choice">Natures Choice</option>
+                        <option value="Bella Pet Mats">Bella Pet Mats</option>
                     </Form.Select>
                     <Form.Control
                         className='ms-4'
