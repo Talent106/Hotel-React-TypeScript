@@ -1,0 +1,15 @@
+.products {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 250px);
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 250px;
+
+    .products-content {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 60%;
+    }
+}
