@@ -4,20 +4,30 @@ import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Button from 'react-bootstrap/Button';
 import { useAppDispatch } from '@/hooks';
-import {  }
+import { productsRequest } from '@/actions/products';
 import '@/assets/scss/views/Products/Products.scss';
 
 const Products: React.FC = () => {
     const [select, setSelect] = useState('');
     const [title, setTitle] = useState('');
     const [price, setPrice] = useState('');
-    const [cut, setCut] = useState(0);
+    const [cut, setCut] = useState('');
     const [quantity, setQuantity] = useState('');
     const dispatch = useAppDispatch();
 
     const handleProducts = () => {
-        if (select && title && price && quantity) {
-            dispatch(productsRequest({ select, title, price, cut, quantity }));
+        const numericPrice = parseFloat(price);
+        const numericCut = cut ? parseFloat(cut) : 0; // Optional field
+        const numericQuantity = parseInt(quantity, 10);
+
+        if (select && title && !isNaN(numericPrice) && !isNaN(numericQuantity)) {
+            dispatch(productsRequest({
+                select,
+                title,
+                price: numericPrice,
+                cut: numericCut,
+                quantity: numericQuantity
+            }));
         } else {
             toast.error("Please check your value...");
         }

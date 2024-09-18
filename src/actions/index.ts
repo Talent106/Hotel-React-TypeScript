@@ -8,11 +8,6 @@ export const ERROR_FOUND = 'ERROR_FOUND';
 export const PRODUCTS_REQUEST = 'PRODUCTS_REQUEST';
 export const PRODUCTS_SUCCESS = 'PRODUCTS_SUCCESS';
 
-export interface Credential {
-    email: string;
-    password: string;
-}
-
 export interface Response {
     type: any;
     data: {
@@ -21,35 +16,3 @@ export interface Response {
         data: any[]
     };
 }
-
-export interface RegisterRequestAction {
-    type: typeof REGISTER_REQUEST;
-    payload: Credential;
-}
-
-export interface RegisterSuccessAction {
-    type: typeof REGISTER_SUCCESS;
-    payload: Response;
-}
-
-export interface LoginRequestAction {
-    type: typeof LOGIN_REQUEST;
-    payload: Credential;
-}
-
-export interface LoginSuccessAction {
-    type: typeof LOGIN_SUCCESS;
-    payload: Response;
-}
-
-export interface ErrorFoundAction {
-    type: typeof ERROR_FOUND,
-    payload: Response
-}
-
-export type ActionTypes =
-| RegisterRequestAction
-| RegisterSuccessAction
-| LoginRequestAction
-| LoginSuccessAction
-| ErrorFoundAction;

@@ -22,12 +22,12 @@ export interface ProductsSuccessAction {
     response: Response
 }
 
-export const ProductsRequest = (e: Products): ProductsRequestAction => ({
+export const productsRequest = (e: Products): ProductsRequestAction => ({
     type: PRODUCTS_REQUEST,
     payload: e
 });
 
-export const ProductsSuccess = (response: Response): ProductsSuccessAction => ({
+export const productsSuccess = (response: Response): ProductsSuccessAction => ({
     type: PRODUCTS_SUCCESS,
     response
 });
