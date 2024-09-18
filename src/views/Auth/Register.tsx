@@ -29,7 +29,7 @@ const Register: React.FC = () => {
         <div className='register'>
             <h3 className='bold capslock'>New Account</h3>
             <div className='content'>
-                <Form.Group className="mb-3 w-30" controlId="formBasicEmail">
+                <Form.Group className="mb-3 w-30">
                     <Form.Label>Email address:</Form.Label>
                     <Form.Control
                         type="email"
@@ -40,7 +40,7 @@ const Register: React.FC = () => {
                     />
                 </Form.Group>
 
-                <Form.Group className="mb-3 w-30" controlId="formBasicEmail">
+                <Form.Group className="mb-3 w-30">
                     <Form.Label>Password:</Form.Label>
                     <Form.Control
                         type="password"
@@ -51,7 +51,7 @@ const Register: React.FC = () => {
                     />
                 </Form.Group>
 
-                <Form.Group className="mb-3 w-30" controlId="formBasicEmail">
+                <Form.Group className="mb-3 w-30">
                     <Form.Label>Conform:</Form.Label>
                     <Form.Control
                         type="password"
