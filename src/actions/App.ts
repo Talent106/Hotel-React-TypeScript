@@ -5,11 +5,22 @@ import {
     LOGIN_SUCCESS,
     Response,
     ERROR_FOUND,
+    GET_DATA_REQUEST,
+    GET_DATA_SUCCESS,
 } from './index';
 
 export interface Credential {
     email: string;
     password: string;
+}
+
+export interface GetDataRequestAction {
+    type: typeof GET_DATA_REQUEST;
+}
+
+export interface GetDataSuccessAction {
+    type: typeof GET_DATA_SUCCESS;
+    response: Response
 }
 
 export interface RegisterRequestAction {
@@ -19,7 +30,7 @@ export interface RegisterRequestAction {
 
 export interface RegisterSuccessAction {
     type: typeof REGISTER_SUCCESS;
-    payload: Response;
+    response: Response;
 }
 
 export interface LoginRequestAction {
@@ -29,13 +40,22 @@ export interface LoginRequestAction {
 
 export interface LoginSuccessAction {
     type: typeof LOGIN_SUCCESS;
-    payload: Response;
+    response: Response;
 }
 
 export interface ErrorFoundAction {
     type: typeof ERROR_FOUND,
-    payload: Response
+    response: Response
 }
+
+export const getDataRequest = (): GetDataRequestAction => ({
+    type: GET_DATA_REQUEST
+});
+
+export const getDataSuccess = (response: Response): GetDataSuccessAction => ({
+    type: GET_DATA_SUCCESS,
+    response
+});
 
 export const registerRequest = (credential: Credential): RegisterRequestAction => ({
     type: REGISTER_REQUEST,
@@ -44,7 +64,7 @@ export const registerRequest = (credential: Credential): RegisterRequestAction =
 
 export const registerSuccess = (response: Response): RegisterSuccessAction => ({
     type: REGISTER_SUCCESS,
-    payload: response
+    response
 });
 
 export const loginRequest = (credential: Credential): LoginRequestAction => ({
@@ -54,15 +74,17 @@ export const loginRequest = (credential: Credential): LoginRequestAction => ({
 
 export const loginSuccess = (response: Response): LoginSuccessAction => ({
     type: LOGIN_SUCCESS,
-    payload: response
+    response
 });
 
 export const errorFound = (response: Response): ErrorFoundAction => ({
     type: ERROR_FOUND,
-    payload: response
+    response
 });
 
 export type ActionTypes =
+| GetDataRequestAction
+| GetDataSuccessAction
 | RegisterRequestAction
 | RegisterSuccessAction
 | LoginRequestAction

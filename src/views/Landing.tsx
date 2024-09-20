@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Banner from '@/components/Landing/Banner';
 import BannerItems from '@/contents/BannerItems';
 import Products from '@/components/Landing/Products';
 import ProductsItems from '@/contents/ProductsItems';
 import NewsLetter from '@/components/Landing/NewsLetter';
+import { useAppDispatch } from '@/hooks';
+import { getDataRequest } from '@/actions/App';
 import '@/assets/scss/views/Landing.scss';
 
 const Landing: React.FC = () => {
+    const dispatch = useAppDispatch();
+
+    useEffect(() => {
+        dispatch(getDataRequest());
+    }, []);
+
     return (
         <div className="landing">
             <div className="carousel">
