@@ -1,16 +1,31 @@
 import { put, call } from 'redux-saga/effects';
 import { ToastContainer, toast } from 'react-toastify';
 import {
-    REGISTER_SUCCESS,
-    ERROR_FOUND,
     Response,
-    LOGIN_SUCCESS
+    REGISTER_SUCCESS,
+    LOGIN_SUCCESS,
+    ERROR_FOUND,
+    GET_DATA_SUCCESS,
 } from '@/actions';
 import {
     RegisterRequestAction,
-    LoginRequestAction
+    LoginRequestAction,
 } from '@/actions/App';
 import API from '@/api/api';
+
+export function* getDataRequest() {
+    try {
+        const response: Response = yield call(API.getData);
+        if (response.data.success) {
+            yield put({ type: GET_DATA_SUCCESS, response: response.data.data });
+        } else {
+            yield toast.error(response.data.message);
+            yield put({ type: ERROR_FOUND });
+        }
+    } catch (err) {
+        yield put({ type: ERROR_FOUND });
+    }
+}
 
 export function* registerRequest(actions: RegisterRequestAction) {
     try {
