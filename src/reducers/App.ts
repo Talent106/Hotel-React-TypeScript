@@ -14,12 +14,14 @@ interface UserState {
     users: any[];
     loading: boolean;
     error: string | null;
+    products: any[];
 }
   
 const initialState: UserState = {
     users: [],
     loading: false,
     error: null,
+    products: []
 }
 
 export default function users(state = initialState, action: ActionTypes): UserState {
@@ -32,7 +34,8 @@ export default function users(state = initialState, action: ActionTypes): UserSt
         case GET_DATA_SUCCESS:
             return {
                 ...state,
-                loading: false
+                loading: false,
+                products: action.response.data.data
             }
         case REGISTER_REQUEST:
             return {

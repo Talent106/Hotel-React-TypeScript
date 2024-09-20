@@ -17,7 +17,7 @@ export function* getDataRequest() {
     try {
         const response: Response = yield call(API.getData);
         if (response.data.success) {
-            yield put({ type: GET_DATA_SUCCESS, response: response.data.data });
+            yield put({ type: GET_DATA_SUCCESS, response: response.data });
         } else {
             yield toast.error(response.data.message);
             yield put({ type: ERROR_FOUND });

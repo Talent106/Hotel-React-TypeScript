@@ -20,7 +20,7 @@ export interface GetDataRequestAction {
 
 export interface GetDataSuccessAction {
     type: typeof GET_DATA_SUCCESS;
-    response: Response
+    response: Response;
 }
 
 export interface RegisterRequestAction {
@@ -45,7 +45,7 @@ export interface LoginSuccessAction {
 
 export interface ErrorFoundAction {
     type: typeof ERROR_FOUND,
-    response: Response
+    response: Response;
 }
 
 export const getDataRequest = (): GetDataRequestAction => ({
