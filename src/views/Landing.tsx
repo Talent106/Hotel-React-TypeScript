@@ -4,13 +4,15 @@ import BannerItems from '@/contents/BannerItems';
 import Products from '@/components/Landing/Products';
 import ProductsItems from '@/contents/ProductsItems';
 import NewsLetter from '@/components/Landing/NewsLetter';
-import { useAppDispatch } from '@/hooks';
+import { useAppDispatch, useAppSelector } from '@/hooks';
 import { getDataRequest } from '@/actions/App';
 import '@/assets/scss/views/Landing.scss';
 
 const Landing: React.FC = () => {
     const dispatch = useAppDispatch();
-
+    const products = useAppSelector((state) => state.app.products);
+    console.log("dddddddd", products);
+    
     useEffect(() => {
         dispatch(getDataRequest());
     }, []);
