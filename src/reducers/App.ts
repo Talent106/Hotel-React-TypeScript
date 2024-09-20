@@ -1,4 +1,6 @@
 import {
+    GET_DATA_REQUEST,
+    GET_DATA_SUCCESS,
     REGISTER_REQUEST,
     REGISTER_SUCCESS,
     LOGIN_REQUEST,
@@ -22,6 +24,16 @@ const initialState: UserState = {
 
 export default function users(state = initialState, action: ActionTypes): UserState {
     switch (action.type) {
+        case GET_DATA_REQUEST:
+            return {
+                ...state,
+                loading: true
+            }
+        case GET_DATA_SUCCESS:
+            return {
+                ...state,
+                loading: false
+            }
         case REGISTER_REQUEST:
             return {
                 ...state,
