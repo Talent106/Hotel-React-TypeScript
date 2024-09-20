@@ -10,12 +10,12 @@ import '@/assets/scss/views/Landing.scss';
 
 const Landing: React.FC = () => {
     const dispatch = useAppDispatch();
-    const products = useAppSelector((state) => state.app.products);
-    console.log("dddddddd", products);
-    
-    useEffect(() => {
-        dispatch(getDataRequest());
-    }, []);
+    // const products = useAppSelector((state) => state.app.products);
+    // console.log("dddddddd", products);
+
+    // useEffect(() => {
+    //     dispatch(getDataRequest());
+    // }, []);
 
     return (
         <div className="landing">
