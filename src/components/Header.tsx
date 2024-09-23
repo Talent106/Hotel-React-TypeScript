@@ -43,7 +43,7 @@ const Header: React.FC = () => {
                         <a>Dog</a>
                         <a>Cat</a>
                         <a href='/about-us'>About</a>
-                        <a>Blog</a>
+                        <a href='/blog'>Blog</a>
                         <a href="/products">Products</a>
                     </div>
                     <Button variant="outline-danger rounded-pill" id="button-addon2">

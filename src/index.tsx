@@ -6,6 +6,7 @@ import App from './App';
 import '@/assets/scss/Global.scss';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'react-toastify/dist/ReactToastify.css';
+import 'react-quill-new/dist/quill.snow.css';
 
 const rootElement = document.getElementById('root');
 const root = ReactDOM.createRoot(rootElement!);
